@@ -6,6 +6,9 @@ Let’s Jump Workout Planner, web application designed to help users track their
 It is a simple, clean, and user-friendly web app designed to help users track their daily workouts, achievements, and progress.
 
 
+##### Developed by MJF (GitHub: M21J)
+
+
 ## How It Works
 ### 🏋️ 1. Today
 
