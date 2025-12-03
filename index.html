@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Let's Jump Weekly Workout Planner</title>
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header with logo top-left -->
+  <header class="app-header">
+    <div class="logo-wrap">
+      <img src="logo(letsJump)2.svg" alt="LetsJump logo" class="logo" />
+      <div class="app-title">Let's Jump</div>
+      
+    </div>
+    <div class="rights">MJF © 2025</div>
+  </header>
+
+  <main class="app-container">
+    <!-- TODAY'S WORKOUT SECTION -->
+    <div id="workouts" class="section active">
+      <h1>🏋️ Today's Workout</h1>
+      <!-- RANDOM QUOTE -->
+      <div id="dailyQuote"></div>
+      <div class="tab-buttons" id="planButtons"></div>
+      <div id="todayList"></div>
+      <div id="starReward" class="star-container">
+        <div class="star">⭐</div>
+        <h3>Awesome! You completed all of today's workouts!</h3>
+      </div>
+    </div>
+
+    <!-- ADD WORKOUT SECTION -->
+    <div id="addWorkout" class="section">
+      <h1>➕ Add Workout</h1>
+      <div class="card">
+        <div class="row">
+          <select id="planSelect"></select>
+          <button id="newPlanBtn" class="pill">+ New Plan</button>
+        </div>
+        <div class="row">
+          <select id="daySelect">
+            <option>Monday</option><option>Tuesday</option><option>Wednesday</option>
+            <option>Thursday</option><option>Friday</option><option>Saturday</option><option>Sunday</option>
+          </select>
+        </div>
+        <div class="day-type">
+          <label><input type="radio" name="dayType" value="workout" checked> Workout Day</label>
+          <label><input type="radio" name="dayType" value="off"> Off Day</label>
+        </div>
+
+        <!-- Wrapped workout input & save in a container so we can hide both -->
+        <div id="workoutFields" class="row">
+          <input id="workoutInput" placeholder="Enter workout..." />
+          <button id="saveBtn" class="pill">Save</button>
+        </div>
+
+        <div id="saveMessage" class="save-msg"></div>
+
+        <div id="editWorkoutList"></div>
+      </div>
+    </div>
+
+    <!-- ACHIEVEMENTS SECTION -->
+    <div id="achievements" class="section">
+      <h1>🎉 Achievements</h1>
+      <div class="card">
+        <input id="achievementInput" placeholder="Enter achievement..." />
+        <button id="celebrateBtn" class="pill">✓</button>
+        <div class="achievement-banner" id="achievementBanner"></div>
+      </div>
+
+      <!-- New Table -->
+      <div class="achievement-table-container card">
+        <table id="achievementTable">
+          <thead>
+            <tr><th>Achievement</th><th>Date</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div class="table-buttons" id="tableNav" style="display:none;">
+          <button id="prevBtn" class="pill small">Back</button>
+          <button id="nextBtn" class="pill small">Next</button>
+        </div>
+      </div>
+
+      <canvas id="confettiCanvas"></canvas>
+    </div>
+  </main>
+
+  <!-- Floating Bottom Navigation (Settings removed) -->
+  <nav class="bottom-nav">
+    <button class="nav-btn active" data-section="workouts">
+      <div class="icon">🏋️</div><div class="label">Today</div>
+    </button>
+    <button class="nav-btn" data-section="addWorkout">
+      <div class="icon">➕</div><div class="label">Plans</div>
+    </button>
+    <button class="nav-btn" data-section="achievements">
+      <div class="icon">⭐</div><div class="label">Achievements</div>
+    </button>
+  </nav>
+
+  
+  <script src="script.js" defer></script>
+  
+  
+</body>
+</html>
